@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Study Spots — Campusly</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+
+    <nav class="bg-white shadow-sm py-4">
+        <div class="container flex justify-between items-center">
+            <div class="logo text-2xl font-bold text-gray-800">Campusly</div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/shakti5.html">Home</a></li>
+                <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/studyspots.html">Study Spots</a></li>
+                <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/dining.html">Dining</a></li>
+                <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/transport.html">Transport</a></li>
+                <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/housing.htmls">Housing</a></li>
+                <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/jobs.html">Jobs & Internships</a></li>
+                <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/events.html">City Events</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+
+<script>
+  const city = localStorage.getItem("selectedCity") || "Your City";
+  document.querySelector(".hero h1").textContent = `Study Spots in ${city}`;
+</script>
+
+<body class="bg-gradient-to-b from-white via-slate-50 to-slate-100 text-slate-800">
+  <!-- NAV identical to search.html -->
+  <!-- ...copy nav links here... -->
+
+  <header class="max-w-3xl mx-auto px-6 mt-10 text-center">
+    <h1 class="text-4xl font-extrabold">Best Study Spots</h1>
+    <p class="mt-2 text-gray-600">Quiet cafés, libraries and coworks near campus</p>
+  </header>
+
+  <section class="max-w-5xl mx-auto px-6 mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="p-4 glass rounded-xl shadow hover:shadow-md transition">
+      <img src="https://i.pinimg.com/736x/7d/2f/9b/7d2f9bb77877e08bb5dac413ca1b156d.jpg" class="w-full h-40 object-cover rounded-lg mb-3">
+      <h3 class="font-semibold">Corner Bean Cafe</h3>
+      <p class="text-sm text-gray-600">Affordable coffee + strong WiFi</p>
+    </div>
+    <!-- add more cards -->
+  </section>
+
+  <footer class="max-w-6xl mx-auto px-6 mt-16 py-8 border-t text-sm text-gray-600">
+    &copy; 2025 Campusly — Student Relocation Assistant
+  </footer>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campusly — Student Relocation Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Inter',sans-serif;background:#f9f9f9;color:#111;line-height:1.5}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:20px 60px;background:white;box-shadow:0 1px 4px rgba(0,0,0,0.05);position:sticky;top:0;z-index:10}
+    .logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:600;letter-spacing:-0.5px}
+    nav ul{list-style:none;display:flex;gap:30px}
+    nav ul li a{text-decoration:none;color:#222;font-weight:400;transition:0.2s}
+    nav ul li a:hover{color:#7c3aed}
+    
+    .hero{text-align:center;padding:80px 20px 40px;background:white}
+    .hero h1{font-family:'Playfair Display',serif;font-size:3rem;margin-bottom:15px}
+    .hero p{color:#555;max-width:520px;margin:0 auto 30px;font-size:1rem}
+    .hero-form{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;margin-top:25px}
+    .hero-form input,.hero-form select{padding:10px 14px;border-radius:25px;border:1px solid #ccc;font-size:0.95rem;min-width:200px}
+    .hero-form button{padding:10px 26px;border-radius:25px;border:none;background:#7c3aed;color:white;font-weight:500;cursor:pointer;transition:0.2s}
+    .hero-form button:hover{background:#5b21b6}
+    .cards{display:flex;justify-content:center;gap:20px;padding:50px 30px;overflow-x:auto}
+    .card{min-width:250px;border-radius:16px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,0.08);background:white;flex-shrink:0;transform:rotate(-2deg);transition:transform 0.3s}
+    .card:nth-child(even){transform:rotate(2deg)}
+    .card:hover{transform:scale(1.05) rotate(0)}
+    .card img{width:100%;height:180px;object-fit:cover}
+    .card-content{padding:15px;text-align:center}
+    .card-content h3{font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:8px}
+    .card-content p{color:#666;font-size:0.9rem}
+    .cards::-webkit-scrollbar{display:none}
+    .cards{-ms-overflow-style:none;scrollbar-width:none}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Campusly</div>
+    <ul>
+      <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/shakti5.html">Home</a></li>
+      <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/studyspots.html">Study Spots</a></li>
+      <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/dining.html">Dining</a></li>
+      <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/transport.html">Transport</a></li>
+      <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/housing.html">Housing</a></li>
+ 	<li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/jobs.html">Jobs & Internships</a></li>
+         <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/events.html">City Events</a></li>
+
+     
+    </ul>
+     </nav>
+
+  <section class="hero">
+    <h1>Settle in Faster 🌍</h1>
+    <p>Find study areas, groceries, transport tips and affordable dining — all tailored for students relocating abroad.</p>
+
+    <form class="hero-form">
+      <input type="text" placeholder="Search city e.g. Mumbai" />
+          <div class="custom-dropdown-container">
+  <select class="custom-dropdown" onchange="location = this.value;">
+   <option value="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/studyspots.html" selected>Study Spots</option>
+    <option value="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/dining.html">Affordable Dining</option>
+    <option value="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/transport.html">Transport</option>
+<option value="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/housing.html" selected>Housing</option>
+<option value="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/jobs.html" selected>Jobs and Internships </option>
+<option value="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/events.html" selected> City Events</option>
+<option value="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/embassies.html" selected>Govenrmnet Offices & Embassies </option>
+
+  </select>
+</div>
+
+<style>
+  .custom-dropdown-container {
+    display: inline-block;
+    position: relative; /* For positioning the pseudo-element */
+  }
+
+  .custom-dropdown {
+    background-color: #000;
+    color: #FFF;
+    border: 1px solid #FFF;
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 10px 10px 10px 16px; /* T, R, B, L */
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 220px; /* Adjust width as needed */
+  }
+
+  .custom-dropdown-container::after {
+    content: '\25BC'; /* Unicode character for dropdown arrow */
+    color: #FFF;
+    position: absolute;
+    right: 20px; /* Adjust space to the right of the dropdown icon */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+    .custom-dropdown option {
+    background-color: #000 !important;
+    color: #FFF;
+    font-weight: 600;
+  }
+
+</style>
+   
+</div>
+         </form>
+  </section>
+
+
+    <div class="card">
+      <img src="https://i.pinimg.com/1200x/1e/b6/83/1eb6834a6f85cbe72238889879e9fcc0.jpg" alt="Affordable Dining" style="width:1500px;height:250px;">
+      <div class="card-content">
+        <h3><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/dining.html">Affordable Dining</a></h3>
+        <p>Student-friendly eateries and markets</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/a0/c9/0f/a0c90f05e34bb527eec107aa584ef98d.jpg" alt="Transportation" style="width:1500px;height:250px;">
+      <div class="card-content">
+        <h3><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/transport.html">Transportation</a></h3>
+        <p>Get around cheaply and safely</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/1200x/2f/d7/df/2fd7df09314c8d353317596248d2b0ff.jpg" alt="Housing" style="width:1500px;height:250px;">
+      <div class="card-content">
+        <h3><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/housing.html">Housing & Bills</a></h3>
+        <p>Find short-term housing and manage utilities</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/6a/99/99/6a999932e7dcafe5825af8ae1805fa41.jpg" alt="Jobs" style="width:1500px;height:300px;">
+      <div class="card-content">
+        <h3><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/jobs.html">Jobs & Internships</a></h3>
+        <p>Discover part-time jobs and internships</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/1200x/3d/54/5b/3d545bb9c62691a99809ea7f8d09645d.jpg" alt="City events" style="width:1500px;height:300px;" >
+      <div class="card-content">
+        <h3><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/events.html">City Events</a></h3>
+        <p>Meetups, student fairs and cultural nights</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/93/b1/05/93b105c3558714534643f190b34081e5.jpg" alt="Government"style="width:1500px;height:300px;" >
+      <div class="card-content">
+        <h3><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/embassies.html">Government & Embassies</a></h3>
+        <p>Where to register, visas and local help</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

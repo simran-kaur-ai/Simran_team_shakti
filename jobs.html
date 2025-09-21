@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs — Campusly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+        }
+        .hero h1, .card-content h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <nav class="bg-white shadow-sm py-4">
+        <div class="container flex justify-between items-center">
+            <div class="logo text-2xl font-bold text-gray-800">Campusly</div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/shakti5.html">Home</a></li>
+                <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/studyspots.html">Study Spots</a></li>
+                <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/dining.html">Dining</a></li>
+                <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/transport.html">Transport</a></li>
+                <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/housing.html">Housing</a></li>
+                <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/jobs.html">Jobs & Internships</a></li>
+                <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/events.html">City Events</a></li>
+            </ul>
+                </div>
+    </nav>
+
+    <header class="hero text-center py-16 bg-gray-100">
+        <h1 class="text-5xl md:text-6xl font-semibold text-gray-800"></h1>
+        <p class="mt-4 text-lg text-gray-600">Your career guide in the city.</p>
+    </header>
+
+    <section class="cards container grid sm:grid-cols-2 lg:grid-cols-3 gap-8 py-12">
+        <div class="card">
+            <img src="https://d32ijn7u0aqfv4.cloudfront.net/wp/wp-content/uploads/raw/SOPS20045_780x440.jpg" alt="Campus jobs" class="w-full h-56 object-cover">
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800">On-Campus Jobs</h3>
+                <p class="mt-2 text-sm text-gray-600">Find part-time work and opportunities within your university.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://files.nc.gov/dhhs/styles/event_image/public/images/2023-04/Internship1.jpg?VersionId=wj4ZEZG.nM0C8BQ9a2PZLY0_Bk_PFjuC&itok=bFGXPWTV" alt="Internship" class="w-full h-56 object-cover">
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800">Internship Opportunities</h3>
+                <p class="mt-2 text-sm text-gray-600">Discover internships relevant to your field of study.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.lifelaunchr.com/wp-content/uploads/2017/02/College-Career-Center-1080x600.jpg" alt="Career center" class="w-full h-56 object-cover">
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800">University Career Centers</h3>
+                <p class="mt-2 text-sm text-gray-600">Resources for resume building, mock interviews, and job fairs.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-6 text-sm text-gray-500 border-t border-gray-200">
+        <p>&copy; 2025 Campusly</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const city = localStorage.getItem("selectedCity");
+            const heading = document.querySelector('.hero h1');
+            
+            if (city) {
+                heading.textContent = `Jobs & Internships in ${city}`;
+            } else {
+                heading.textContent = `Jobs & Internships`;
+            }
+        });
+    </script>
+</body>
+</html>

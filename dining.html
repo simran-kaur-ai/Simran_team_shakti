@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining — Campusly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+        }
+        .hero h1, .card-content h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+            </style>
+</head>
+<body class="bg-gray-50">
+
+    <nav class="bg-white shadow-sm py-4">
+        <div class="container flex justify-between items-center">
+            <div class="logo text-2xl font-bold text-gray-800">Campusly</div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/shakti5.html">Home</a></li>
+                <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/studyspots.html">Study Spots</a></li>
+                <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/dining.html">Dining</a></li>
+                <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/transport.html">Transport</a></li>
+                <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/housing.html">Housing</a></li>
+                <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/jobs.html">Jobs & Internships</a></li>
+                <li><a href="file:///C:/Users/Harmeet%20Kaur/OneDrive/Desktop/events.html">City Events</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero text-center py-16 bg-gray-100">
+        <h1 class="text-5xl md:text-6xl font-semibold text-gray-800"></h1>
+        <p class="mt-4 text-lg text-gray-600">Student-friendly cafes, markets and food halls for every craving & budget.</p>
+    </header>
+
+    <section class="cards container grid sm:grid-cols-2 lg:grid-cols-3 gap-8 py-12">
+        <div class="card">
+            <img src="https://i.pinimg.com/1200x/d5/3e/dc/d53edcd31c5aa5e1d50ba4be5b9e647e.jpg" alt="Street food" class="w-full h-56 object-cover">
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800">Global Street Market</h3>
+                <p class="mt-2 text-sm text-gray-600">Cheap eats and great atmosphere.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/eb/e6/4c/ebe64cd8d6d82da324070aa77e52a786.jpg" alt="Pizzeria" class="w-full h-56 object-cover">
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800">Student Slice</h3>
+                <p class="mt-2 text-sm text-gray-600">Half-price pizza with student ID.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2022/01/21105730/vegan-cafes-in-Mumbai.jpg?tr=w-1366,f-jpg,pr-true" alt="Vegan café" class="w-full h-56 object-cover">
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800">Green Bowl Café</h3>
+                <p class="mt-2 text-sm text-gray-600">Affordable vegan bowls and smoothies.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-6 text-sm text-gray-500 border-t border-gray-200">
+        <p>&copy; 2025 Campusly</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const city = localStorage.getItem("selectedCity");
+            const heading = document.querySelector('.hero h1');
+            
+            if (city) {
+                heading.textContent = `Affordable Dining in ${city}`;
+            } else {
+                heading.textContent = `Affordable Dining`;
+            }
+        });
+    </script>
+
+</body>
+</html>
